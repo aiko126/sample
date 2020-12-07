@@ -1,0 +1,139 @@
+ <!DOCTYPE html>
+ <html lang="ja">
+
+ <head>
+ 	<meta charset="UTF-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<title><a href="index.html">brand philosophy | du mi</a></title>
+ 	<link rel="icon" type="image/ico" href="images/favicon-dumi.ico">
+ 	<meta name="description" content="子ども服と少し大人服も">
+
+ 	<!-- 	css  -->
+ 	<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+ 	<!--	jQuery  -->
+ 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+ 	<link rel="stylesheet" href="css/style.css">
+
+ </head>
+
+ <body>
+ 	<div class="wrapper">
+ 		<!-- ヘッダー	-->
+ 		<header class="header">
+ 			<h1 class="logo"><a href="index.html"><img src="images/logo-dumi.png" alt="du mi"></a></h1>
+ 			<nav class="container nav2">
+ 				<ul>
+ 					<li><a href="index.html">home</a></li>
+ 					<li class="two-step"><a href="brandphilosophy.html">brand<span>philosophy</span></a></li>
+ 					<li><a href="news.html">news</a></li>
+ 					<li><a href="store.html">store</a></li>
+ 					<li><a href="contact.html">contact</a></li>
+ 				</ul>
+ 			</nav>
+
+ 		</header>
+ 		<!-- ヘッダーここまで	-->
+ 		<!-- メイン -->
+ 		<main>
+ 			<h2>brand philosophy</h2>
+ 			<h3>コンセプト</h3>
+ 			<div class="brand philosophy">
+ 				<div class="concept-item fadein">
+ 					<div class="concept-photo">
+ 						<img src="images/concept2.jpg" alt="コンセプト写真">
+ 					</div>
+ 					<div class="concept-text">
+ 						<p>「こんな子ども服ほしかった！」をテーマに生地やデザインに遊び心を取り入れて子ども服を作っています。大人も自分も着てみたかったな、と思えるようなここだけのデザインを日々考えています。着てる人も周りの人も楽しくなるような服を作っていきたいです。</p>
+ 					</div>
+ 				</div>
+
+ 				<h3>過去のイベント</h3>
+ 				<div class="event-item fadein">
+ 					<div class="event-photo">
+ 						<img src="images/event.jpg" alt="イベント写真">
+ 					</div>
+ 					<div class="event-text">
+ 						<p>2019年に台湾での同人誌のイベント"ZINE"に参加しました！！</p>
+ 					</div>
+ 				</div>
+
+ 				<h3>過去の商品</h3>
+ 				<div class="sample-item">
+ 					<div class="sample-photo fadein">
+ 						<img src="images/sample01.jpg" alt="過去の商品写真1">
+ 						<h4>orginal t-shirt</h4>
+ 						<p>du miのorginal t-shirt バックプリントもついてます！</p>
+ 					</div>
+ 					
+
+ 					<div class="sample-photo fadein">
+ 						<img src="images/sample03.jpg" alt="過去の商品写真2">
+ 						<h4>赤のシャツ</h4>
+ 						<p>女の子も男の子も着れますよ。</p>
+ 					</div>
+ 				
+ 					
+
+ 					<div class="sample-photo fadein">
+ 						<img src="images/sample04.jpg" alt="過去の商品写真3">
+ 						<h4>大人服＊チューリップスカート</h4>
+ 						<p>子ども服で大人気のチューリップスカートが大人服にもなりました。</p>
+ 					</div>
+ 				
+</div>
+
+
+ 			</div>
+ 		</main>
+ 	</div>
+ 	<!-- メインここまで -->
+ 	<!-- フッター -->
+ 	<footer class="containar footer-container">
+ 		<div class="footer-wrapper">
+ 			<ul class="footer-nav">
+ 				<li><a href="index.html">home</a></li>
+ 				<li><a href="brandphilosophy.html">brand philosophy</a></li>
+ 				<li><a href="news.html">news</a></li>
+ 				<li><a href="store.html">store</a></li>
+ 				<li><a href="contact.html">contact</a></li>
+ 			</ul>
+
+ 			<div class="footer-img"><img src="images/footer4.gif" alt="">
+ 			</div>
+ 		</div>
+ 	</footer>
+ 	<!-- フッターここまで -->
+
+ 	<div id="page_top"><a href="#"></a></div>
+
+
+ 	<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+
+
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 	<script>
+ 		window.onload = function() {
+ 			scroll_effect();
+
+ 			$(window).scroll(function() {
+ 				scroll_effect();
+ 			});
+
+ 			function scroll_effect() {
+ 				$('.fadein').each(function() {
+ 					var elemPos = $(this).offset().top,
+ 						scroll = $(window).scrollTop(),
+ 						windowHeight = $(window).height();
+ 					if (scroll > elemPos - windowHeight + 100) {
+ 						$(this).addClass('scrollin');
+ 					}
+ 				});
+ 			};
+ 		};
+
+ 	</script>
+ 	<script src="js/script.js"></script>
+ </body>
+
+ </html>

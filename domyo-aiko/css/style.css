@@ -1,0 +1,265 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 固定するコンテンツ */
+.fixed-bg {
+    position: relative;
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.fixed-bg-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 90%;
+    text-align: center;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.fixed-bg-content h1 {
+    font-size: 2.6rem;
+    color: #fff;
+    margin-bottom: 24px;
+}
+
+/* 固定しないコンテンツ */
+.scroll-bg {
+    padding: 8em 0;
+}
+
+.scroll-bg-content {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.scroll-bg-content p {
+    font-size: 1.2rem;
+/*    font-weight: normal;*/
+    line-height: 1.8;
+}
+
+/* 背景画像 */
+.bg01 {
+    background-image: url(../images/top1-min.jpg);
+}
+
+.bg02 {
+    background-image: url(../images/top2.jpg);
+}
+
+.bg03 {
+    background-image: url(../images/top3-min.jpg);
+}
+
+.bg04 {
+    background-image: url(../images/top4-min.jpg);
+}
+
+/* 背景色 */
+.bg-color01 {
+    background-color: #f6b7aa;
+}
+
+.bg-color02 {
+    background-color: #fae06a;
+}
+
+.bg-color03 {
+    background-color: #0e536d;
+    color: #ccc;
+}
+
+/* スマホでは固定しない */
+@media (max-width: 768px) {
+    .fixed-bg-content h1 {
+        font-size: 2rem;
+        line-height: 1.4;
+    }
+
+    .fixed-bg {
+        background-attachment: scroll;
+    }
+
+    .scroll-bg-content p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .scroll-bg {
+        padding: 4em 0;
+    }
+}
+
+/* Scrollサイン */
+.btn {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    padding-top: 60px;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.btn span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 26px;
+    height: 26px;
+    margin-left: -13px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(-45deg);
+    animation: sdb 2s infinite;
+    box-sizing: border-box;
+}
+
+/*
+@keyframes sdb {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+
+  20% {
+    transform: rotate(-45deg) translate(-10px, 10px);
+  }
+
+  40% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+}
+*/
+
+@keyframes sdb {
+    0% {
+        transform: rotate(-45deg) translate(0, 0);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(-45deg) translate(-15px, 15px);
+        opacity: 0;
+    }
+}
+
+.home-h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.skill img {
+    max-width: 900px;
+    margin: 40px 0;
+}
+.like img {
+    max-width: 900px;
+    margin: 40px 0;
+    }
+.profale {
+    overflow: hidden;
+}
+.profale img {
+    float: left;
+    margin-right: 50px;
+    border-radius: 50%;
+    width: 30%;
+}
+.profale-name {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem 0 0.5rem 0;
+}
+.art {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.art img {
+    max-width: 400px;
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+.art p {
+    text-align: center;
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+a.luminous {
+    text-decoration: none;
+    vertical-align: bottom;
+}
+
+
+.lum-lightbox {
+    z-index: 999;
+}
+
+@media (max-width: 768px) {
+
+    .lum-lightbox-inner img {
+        max-width: 150vw;
+        /* 好きなサイズ感で */
+        max-height: 88vh;
+        /* 90vhだと数pxだけ上下にスクロールできてしまうためこのサイズ */
+        /* display: block;  を追加すると max-height: 92vh くらいでも大丈夫 */
+    }
+
+    /* 矢印ナビが大きすぎると感じたら */
+    .lum-gallery-button::after {
+        width: 6vw;
+        height: 6vw;
+    }
+}
+
+.saite {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.saite img {
+    max-width: 400px;
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+
+.saite a {
+    display: block;
+    text-decoration: none;
+}
+.saite p {
+    text-align: center;
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .skill img {
+        width: 100%;
+    }
+    .like img {
+        width: 100%;
+    }
+    .item img {
+        margin: 20px 70px;
+    }
+    .saite {
+        display: flex;
+        flex-direction: column;
+    }
+}

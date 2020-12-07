@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>bg-Attachment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/luminous-basic.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="fixed-bg bg01">
+        <div class="fixed-bg-content">
+            <h1>Aiko Domyo</h1>
+        </div>
+        <div class="btn"><span></span>Scroll</div>
+    </div>
+
+    <div class="scroll-bg bg-color01">
+        <div class="scroll-bg-content">        
+            <div class="profale">
+                <img src="images/profale.jpg" alt="道明あい子">
+                <p class="profale-name">道明あい子</p>
+                <p>生年月日</p>
+                <p>1983年1月26日<br>E-mail:anemone.a_i_k_o@icloud.com</p>
+                </div>
+            </div>
+        </div>
+    
+
+
+    <div class="fixed-bg bg02">
+        <div class="fixed-bg-content">
+            <h1>Profale</h1>
+        </div>
+    </div>
+
+    <div class="scroll-bg bg-color02">
+        <div class="scroll-bg-content">
+            <h2>自己紹介</h2>
+            <p>専門学校を卒業後、保育園に入社し6年間保育士をしまいた。そこで、保育士の仕事や人間関係、子供の成長、コミュニケーションの大切さを学びました。その後2年間雑貨屋さんを開くには、どうすればよいか経営や商品の制作を勉強し、期間限定のショップ体験を通してお店の流れを学びました。しかし、雑貨の仕事にはつかず、その後は保育士をメインに戻りました。2020年3月に保育園を退職し、保育士だけでなくこれからの時代パソコンに関わる事がもっと増えると思い、自分でもWEBサイトを作れるようになりたいと思い、2020年9月から3ヶ月間職業訓練校でWFBサイトの制作やillustrator・Photoshopを勉強しました。HTMLとCSSの基礎から模写コーディングを経て架空のサイトも１つ自分で作りました。</p>
+            <div class="skill">
+                <img src="images/skill.jpg" alt=""> 
+            </div>
+            <div class="like">
+                <img src="images/like.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed-bg bg03">
+        <div class="fixed-bg-content">
+            <h1>Works</h1>
+        </div>
+    </div>
+
+    <div class="scroll-bg bg-color03">
+        <div class="scroll-bg-content">
+
+            <h2 class="home-h2">制作実績 ①　Photoshop・illustrator</h2>
+            <div class="art">
+                <a href="images/card.jpg" class="luminous">
+                    <img src="images/card.jpg" alt="名刺"><p>illustratorでの架空の名刺制作</p>
+                </a>
+                <a href="images/menu_pizza.jpg" class="luminous">
+                    <img src=images/menu_pizza.jpg alt="PIZZA keyvisual"><p>PhotoshopでPIZZAのkeyvisual制作</p>
+                </a>
+                <a href="images/kujiracafe-yasai.jpg" class="luminous">
+                    <img src=images/kujiracafe-yasai.jpg alt="KUJIRAcafe-yasai"><p>Photoshopで野菜を使ったカフェのkeyvisual制作</p>
+                </a>
+                <a href="images/event_miso.jpg" class="luminous">
+                    <img src=images/event_miso.jpg alt="MISO keyvisual"><p>illustrator・Photoshopでみそづくりの広告制作</p>
+                </a>
+            </div><!-- /.art -->
+            <h2 class="home-h2">制作実績 ②　Webサイト</h2>
+            <div class="saite">
+                <a href="dumi/index.html" target="_blank"><img src="images/du_mi.jpg" alt="du_mi"><p><b>架空サイト　du mi</b></p><p>従姉妹のブランドのdu miの架空のサイト制作<br>実際にWebサイトを運営することを仮定して制作</p></a>
+                <a href="cafe/index.html" target="_blank"><img src="images/kujiracafe.jpg" alt="KUJIRA cafe"><p><b>模写コーディング　KUJIRA cafe</b></p><p>「スラスラわかるHTML&amp;CSSの基本」<br>を参考に制作</p></a>
+                <a href="web-codera/index.html" target="_blank"><img src="images/web-codera-keyvisual.jpg" alt="du_mi"><p><b>模写コーディング　WEB codera</b></p><p>「いちばんよくわかるHTML5&amp;CSS3デザイン<br>きちんと入門」を参考に制作</p></a>
+<!--                <a href="wcb-cafe/index.html" target="_blank"><img src="images/wcb-cafe-keyvisual.jpg" alt="du_mi"><p><b>模写コーディング　WCB cafe</b></p><p>「1冊ですべて身につくHTML&amp;CSSと<br>Webデザイン入門講座」を参考に制作</p></a>-->
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="fixed-bg bg04">
+        <div class="fixed-bg-content">
+            <h1>Since 1983</h1>
+        </div>
+    </div>
+
+    <script src="js/Luminous.min.js"></script>
+    <script>
+        var luminousTrigger = document.querySelectorAll('.luminous');
+        var options = {
+            caption: function(trigger) {
+                return trigger.querySelector('img').getAttribute('alt');
+            },
+        }
+        if (luminousTrigger !== null) {
+            new LuminousGallery(luminousTrigger, {}, options);
+        }
+
+    </script>
+</body>
+
+</html>
